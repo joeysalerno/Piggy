@@ -59,15 +59,15 @@ class Piggy(PiggyParent):
 
     def joey(self):
       self.fwd()
-      time.sleep(2)
+      time.sleep(1)
       self.right(90)
       time.sleep(1)
       self.fwd()
-      time.sleep(2)
+      time.sleep(1)
       self.right(90)
       time.sleep(1)
       self.fwd()
-      time.sleep(2)
+      time.sleep(1)
       self.right(90)
       time.sleep(1)
       self.fwd()
