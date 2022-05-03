@@ -95,6 +95,7 @@ class Piggy(PiggyParent):
         time.sleep(2)
         self.stop()
         self.right(320)
+        self.sleep(1)
         self.fwd()
         time.sleep(2)
         self.left(360)
