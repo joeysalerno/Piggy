@@ -93,7 +93,6 @@ class Piggy(PiggyParent):
         # lower-ordered example...
         self.right(primary=50, counter=50)
         time.sleep(2)
-        self.stop()
         self.turn_by_deg(360)
         self.sleep(1)
         self.fwd()
