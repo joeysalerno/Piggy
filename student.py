@@ -100,6 +100,10 @@ class Piggy(PiggyParent):
         time.sleep(2)
         self.turn_by_deg(180)
         self.sleep(2)
+        self.fwd
+        time.sleep(2)
+        self.turn_by_deg(180)
+        self.sleep(2)
         
         
     def safe_to_dance(self):
