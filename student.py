@@ -91,6 +91,7 @@ class Piggy(PiggyParent):
         # TODO: check to see if it's safe before dancing
         
         # lower-ordered example...
+        self.scan
         self.right(primary=50, counter=50)
         self.fwd
         time.sleep(2)
@@ -104,12 +105,16 @@ class Piggy(PiggyParent):
         self.turn_by_deg(180)
         self.turn_by_deg(180)
         self.turn_by_deg(180)
-        self.back()
-        self.fwd()
+        time.sleep(1)
+        self.back
+        time.sleep(1)
+        self.fwd
         self.turn_by_deg(360)
+        self.servo(1000)
+        time.sleep(1)
+        self.servo(1000) 
     def safe_to_dance(self):
-        """ Does a 360 distance check and returns true if safe """
-        pass
+  
 
     def shake(self):
         """ Another example move """
@@ -147,7 +152,7 @@ class Piggy(PiggyParent):
         self.stop()
         # TODO: scan so we can decide left or right
         # TODO: average the right side of the scan dict
-        # TODO: average the left side of the scan dict
+        # TODO: average the left side of the scan dicy
         
 
 

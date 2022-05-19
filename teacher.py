@@ -1,3 +1,4 @@
+
 # PYTHON3 ONLY
 # Based on:
 # https://www.dexterindustries.com/GoPiGo/
@@ -224,5 +225,3 @@ class PiggyParent(gopigo3.GoPiGo3):
             self.turn_by_deg(-30)
             time.sleep(.25)
             self.stop()
-
-
