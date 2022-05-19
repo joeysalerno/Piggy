@@ -92,6 +92,9 @@ class Piggy(PiggyParent):
         
         # lower-ordered example...
         self.scan
+        if '50' in self.scan:
+              self.stop
+          else
         self.right(primary=50, counter=50)
         self.fwd
         time.sleep(2)
@@ -141,8 +144,7 @@ class Piggy(PiggyParent):
         for angle in range(self.MIDPOINT-350, self.MIDPOINT+350, 3):
             self.servo(angle)
             self.scan_data[angle] = self.read_distance()
-            if '50' in self.scan:
-              self.stop
+           
 
     def obstacle_count(self):
         """Does a 360 scan and returns the number of obstacles it sees"""
