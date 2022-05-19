@@ -110,15 +110,7 @@ class Piggy(PiggyParent):
         time.sleep(1)
         self.fwd
         self.turn_by_deg(360)
-        self.servo(1000)
-        time.sleep(1)
-        self.servo(-1000) 
-        self.servo(1000)
-        time.sleep(1)
-        self.servo(-1000) 
-        self.servo(1000)
-        time.sleep(1)
-        self.servo(-1000) 
+       
     def safe_to_dance(self):
         pass
 
@@ -141,7 +133,7 @@ class Piggy(PiggyParent):
         for angle in range(self.MIDPOINT-350, self.MIDPOINT+350, 3):
             self.servo(angle)
             self.scan_data[angle] = self.read_distance()
-            if self.read_distance() = < 500:
+            if self.read_distance() = < 500
           return false
          
             
