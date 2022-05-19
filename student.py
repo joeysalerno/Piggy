@@ -114,7 +114,7 @@ class Piggy(PiggyParent):
         time.sleep(1)
         self.servo(1000) 
     def safe_to_dance(self):
-  
+        pass
 
     def shake(self):
         """ Another example move """
