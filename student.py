@@ -106,7 +106,7 @@ class Piggy(PiggyParent):
         self.turn_by_deg(180)
         self.turn_by_deg(180)
         time.sleep(1)
-        self.back
+        self.back(1)
         time.sleep(1)
         self.fwd
         self.turn_by_deg(360)
