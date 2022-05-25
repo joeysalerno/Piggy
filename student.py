@@ -59,12 +59,13 @@ class Piggy(PiggyParent):
 
     def joey(self):
       self.fwd()
-      if self.read_distance() <= 300:
+      while True:
+        if self.read_distance() <= 300:
          
   
   
   
-         self.stop()
+           self.stop()
 
 
 
