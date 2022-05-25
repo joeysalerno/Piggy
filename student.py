@@ -60,12 +60,14 @@ class Piggy(PiggyParent):
     def joey(self):
       self.fwd()
       while True:
-        if self.read_distance() <= 60:
+        if self.read_distance() <= 150:
          
   
   
-  
            self.stop()
+           time.sleep(1)
+           self.turn_by_deg(180)
+          
 
 
 
