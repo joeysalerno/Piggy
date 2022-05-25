@@ -69,18 +69,27 @@ class Piggy(PiggyParent):
     
     
              self.stop()
-             self.servo(1000)
-             time.sleep(.25)
-             left = self.read_distance()
              self.servo(2000)
              time.sleep(.25)
+             left = self.read_distance()
+          
+             self.servo(1000)
+             time.sleep(.25)
              right = self.read_distance()
-             time.sleep(10)
-             self.turn_by_deg(90)
-             self.fwd()
-             time.sleep(1)
-             self.turn_by_deg(-90)
+             if left > right:
+              self.turn_by_deg(-90)
+              self.fwd()
+              time.sleep(1)
+              self.turn_by_deg(90)
+             if right > left:
+               self.turn_by_deg(90)
+               self.fwd()
+               time.sleep(1)
+               self.turn_by_deg(-90)
 
+
+          
+           
              
             
 
