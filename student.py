@@ -91,29 +91,40 @@ class Piggy(PiggyParent):
         # TODO: check to see if it's safe before dancing
         
         # lower-ordered example...
-        self.scan
-        self.right(primary=50, counter=50)
-        self.fwd
-        time.sleep(2)
-        self.turn_by_deg(180)
-        self.fwd
-        time.sleep(2)
-        self.turn_by_deg(180)
-        self.fwd
-        time.sleep(2)
-        self.turn_by_deg(180)
-        self.turn_by_deg(180)
-        self.turn_by_deg(180)
-        self.turn_by_deg(180)
-        time.sleep(1)
-        self.back(1)
-        time.sleep(1)
-        self.fwd
-        self.turn_by_deg(360)
+        if self.safe_to_dance():
+          self.right(primary=50, counter=50)
+          self.fwd()
+          time.sleep(2)
+          self.turn_by_deg(180)
+          self.fwd()
+          time.sleep(2)
+          self.turn_by_deg(180)
+          self.fwd()
+          time.sleep(2)
+          self.turn_by_deg(180)
+          self.turn_by_deg(180)
+          self.turn_by_deg(180)
+          self.turn_by_deg(180)
+          time.sleep(1)
+          self.back(1)
+          time.sleep(1)
+          self.fwd()
+          self.turn_by_deg(360)
        
     def safe_to_dance(self):
-        pass
+        self.servo(1000)
+        time.sleep(.25)
+        if self.read_distance() <= 300:
+              return False
+        
+        self.servo(2000)
+        time.sleep(.35)
+        if self.read_distance() <= 300:
+              return False
 
+        return True
+
+      
     def shake(self):
         """ Another example move """
         self.deg_fwd(720)
@@ -133,9 +144,7 @@ class Piggy(PiggyParent):
         for angle in range(self.MIDPOINT-350, self.MIDPOINT+350, 3):
             self.servo(angle)
             self.scan_data[angle] = self.read_distance()
-            if self.read_distance() <= 500:
-              return false
-         
+            
             
 
             
