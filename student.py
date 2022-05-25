@@ -59,23 +59,12 @@ class Piggy(PiggyParent):
 
     def joey(self):
       self.fwd()
-      time.sleep(1)
-      self.right(85)
-      time.sleep(1)
-      self.fwd()
-      time.sleep(1)
-      self.right(85)
-      time.sleep(1)
-      self.fwd()
-      time.sleep(1)
-      self.right(85)
-      time.sleep(1)
-      self.fwd()
-      time.sleep(1)
+      if self.read_distance() <= 300:
+         
   
   
   
-      self.stop()
+         self.stop()
 
 
 
