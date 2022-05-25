@@ -56,23 +56,33 @@ class Piggy(PiggyParent):
     STUDENT PROJECTS
     ****************
     '''
-
+    
     def joey(self):
-      
+      left = self.read_distance()
+      right = self.read_distance()
       while True:
-        self.fwd()
-        if self.read_distance() <= 150:
-         
-  
-  
-           self.stop()
-           time.sleep(1)
-           self.turn_by_deg(90)
-           self.fwd()
-           time.sleep(1)
-           self.turn_by_deg(-90)
+        
+        if self.read_distance() <= 300:  
           
           
+           
+    
+    
+             self.stop()
+             self.servo(1000)
+             time.sleep(.25)
+             left = self.read_distance()
+             self.servo(2000)
+             time.sleep(.25)
+             right = self.read_distance()
+             time.sleep(10)
+             self.turn_by_deg(90)
+             self.fwd()
+             time.sleep(1)
+             self.turn_by_deg(-90)
+
+             
+            
 
 
 
